@@ -1,0 +1,480 @@
+fileFormatVersion: 2
+guid: 597b228f08c187c4fbb4e6d45ad61714
+timeCreated: 1440786446
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Bone021
+    100002: Bone022
+    100004: Bone023
+    100006: Bone024
+    100008: Bone025
+    100010: Bone026
+    100012: Bone027
+    100014: Bone028
+    100016: Bone029
+    100018: Bone030
+    100020: Bone031
+    100022: Bone032
+    100024: Bone033
+    100026: Bone034
+    100028: Bone035
+    100030: Bone036
+    100032: Bone037
+    100034: Bone038
+    100036: O
+    100038: OOs_M
+    100040: OOs_OeilD
+    100042: OOs_OeilG
+    100044: OOs_PaupiereD
+    100046: OOs_PaupiereD001
+    100048: OOs_PaupiereG
+    100050: OOs_PaupiereG001
+    100052: OOs_PupilleD
+    100054: OOs_PupilleG
+    100056: OOs_SM
+    100058: //RootNode
+    400000: Bone021
+    400002: Bone022
+    400004: Bone023
+    400006: Bone024
+    400008: Bone025
+    400010: Bone026
+    400012: Bone027
+    400014: Bone028
+    400016: Bone029
+    400018: Bone030
+    400020: Bone031
+    400022: Bone032
+    400024: Bone033
+    400026: Bone034
+    400028: Bone035
+    400030: Bone036
+    400032: Bone037
+    400034: Bone038
+    400036: O
+    400038: OOs_M
+    400040: OOs_OeilD
+    400042: OOs_OeilG
+    400044: OOs_PaupiereD
+    400046: OOs_PaupiereD001
+    400048: OOs_PaupiereG
+    400050: OOs_PaupiereG001
+    400052: OOs_PupilleD
+    400054: OOs_PupilleG
+    400056: OOs_SM
+    400058: //RootNode
+    4300000: O
+    7400000: Anim
+    7400002: Idle
+    7400004: Perdu
+    7400006: Gagne
+    9500000: //RootNode
+    13700000: O
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Anim
+      takeName: Take 001
+      firstFrame: 5
+      lastFrame: 35
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: O
+        weight: 1
+      - path: OOs_SM
+        weight: 1
+      - path: OOs_SM/OOs_M
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone021
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone021/Bone022
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone021/Bone022/Bone023
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone021/Bone022/Bone023/Bone024
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone021/Bone022/Bone023/Bone024/Bone025
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone021/Bone022/Bone023/Bone026
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone021/Bone022/Bone023/Bone026/Bone027
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone021/Bone022/Bone023/Bone028
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone021/Bone022/Bone023/Bone028/Bone029
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone030
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone030/Bone031
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone030/Bone031/Bone032
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone030/Bone031/Bone032/Bone033
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone030/Bone031/Bone032/Bone033/Bone034
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone030/Bone031/Bone032/Bone035
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone030/Bone031/Bone032/Bone035/Bone036
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone030/Bone031/Bone032/Bone037
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone030/Bone031/Bone032/Bone037/Bone038
+        weight: 1
+      - path: OOs_SM/OOs_M/OOs_OeilD
+        weight: 1
+      - path: OOs_SM/OOs_M/OOs_OeilD/OOs_PaupiereD
+        weight: 1
+      - path: OOs_SM/OOs_M/OOs_OeilD/OOs_PaupiereD001
+        weight: 1
+      - path: OOs_SM/OOs_M/OOs_OeilD/OOs_PupilleD
+        weight: 1
+      - path: OOs_SM/OOs_M/OOs_OeilG
+        weight: 1
+      - path: OOs_SM/OOs_M/OOs_OeilG/OOs_PaupiereG
+        weight: 1
+      - path: OOs_SM/OOs_M/OOs_OeilG/OOs_PaupiereG001
+        weight: 1
+      - path: OOs_SM/OOs_M/OOs_OeilG/OOs_PupilleG
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Idle
+      takeName: Take 001
+      firstFrame: 40
+      lastFrame: 140
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: O
+        weight: 1
+      - path: OOs_SM
+        weight: 1
+      - path: OOs_SM/OOs_M
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone021
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone021/Bone022
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone021/Bone022/Bone023
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone021/Bone022/Bone023/Bone024
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone021/Bone022/Bone023/Bone024/Bone025
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone021/Bone022/Bone023/Bone026
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone021/Bone022/Bone023/Bone026/Bone027
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone021/Bone022/Bone023/Bone028
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone021/Bone022/Bone023/Bone028/Bone029
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone030
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone030/Bone031
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone030/Bone031/Bone032
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone030/Bone031/Bone032/Bone033
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone030/Bone031/Bone032/Bone033/Bone034
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone030/Bone031/Bone032/Bone035
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone030/Bone031/Bone032/Bone035/Bone036
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone030/Bone031/Bone032/Bone037
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone030/Bone031/Bone032/Bone037/Bone038
+        weight: 1
+      - path: OOs_SM/OOs_M/OOs_OeilD
+        weight: 1
+      - path: OOs_SM/OOs_M/OOs_OeilD/OOs_PaupiereD
+        weight: 1
+      - path: OOs_SM/OOs_M/OOs_OeilD/OOs_PaupiereD001
+        weight: 1
+      - path: OOs_SM/OOs_M/OOs_OeilD/OOs_PupilleD
+        weight: 1
+      - path: OOs_SM/OOs_M/OOs_OeilG
+        weight: 1
+      - path: OOs_SM/OOs_M/OOs_OeilG/OOs_PaupiereG
+        weight: 1
+      - path: OOs_SM/OOs_M/OOs_OeilG/OOs_PaupiereG001
+        weight: 1
+      - path: OOs_SM/OOs_M/OOs_OeilG/OOs_PupilleG
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Perdu
+      takeName: Take 001
+      firstFrame: 145
+      lastFrame: 175
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: O
+        weight: 1
+      - path: OOs_SM
+        weight: 1
+      - path: OOs_SM/OOs_M
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone021
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone021/Bone022
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone021/Bone022/Bone023
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone021/Bone022/Bone023/Bone024
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone021/Bone022/Bone023/Bone024/Bone025
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone021/Bone022/Bone023/Bone026
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone021/Bone022/Bone023/Bone026/Bone027
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone021/Bone022/Bone023/Bone028
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone021/Bone022/Bone023/Bone028/Bone029
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone030
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone030/Bone031
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone030/Bone031/Bone032
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone030/Bone031/Bone032/Bone033
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone030/Bone031/Bone032/Bone033/Bone034
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone030/Bone031/Bone032/Bone035
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone030/Bone031/Bone032/Bone035/Bone036
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone030/Bone031/Bone032/Bone037
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone030/Bone031/Bone032/Bone037/Bone038
+        weight: 1
+      - path: OOs_SM/OOs_M/OOs_OeilD
+        weight: 1
+      - path: OOs_SM/OOs_M/OOs_OeilD/OOs_PaupiereD
+        weight: 1
+      - path: OOs_SM/OOs_M/OOs_OeilD/OOs_PaupiereD001
+        weight: 1
+      - path: OOs_SM/OOs_M/OOs_OeilD/OOs_PupilleD
+        weight: 1
+      - path: OOs_SM/OOs_M/OOs_OeilG
+        weight: 1
+      - path: OOs_SM/OOs_M/OOs_OeilG/OOs_PaupiereG
+        weight: 1
+      - path: OOs_SM/OOs_M/OOs_OeilG/OOs_PaupiereG001
+        weight: 1
+      - path: OOs_SM/OOs_M/OOs_OeilG/OOs_PupilleG
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Gagne
+      takeName: Take 001
+      firstFrame: 180
+      lastFrame: 240
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: O
+        weight: 1
+      - path: OOs_SM
+        weight: 1
+      - path: OOs_SM/OOs_M
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone021
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone021/Bone022
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone021/Bone022/Bone023
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone021/Bone022/Bone023/Bone024
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone021/Bone022/Bone023/Bone024/Bone025
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone021/Bone022/Bone023/Bone026
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone021/Bone022/Bone023/Bone026/Bone027
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone021/Bone022/Bone023/Bone028
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone021/Bone022/Bone023/Bone028/Bone029
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone030
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone030/Bone031
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone030/Bone031/Bone032
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone030/Bone031/Bone032/Bone033
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone030/Bone031/Bone032/Bone033/Bone034
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone030/Bone031/Bone032/Bone035
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone030/Bone031/Bone032/Bone035/Bone036
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone030/Bone031/Bone032/Bone037
+        weight: 1
+      - path: OOs_SM/OOs_M/Bone030/Bone031/Bone032/Bone037/Bone038
+        weight: 1
+      - path: OOs_SM/OOs_M/OOs_OeilD
+        weight: 1
+      - path: OOs_SM/OOs_M/OOs_OeilD/OOs_PaupiereD
+        weight: 1
+      - path: OOs_SM/OOs_M/OOs_OeilD/OOs_PaupiereD001
+        weight: 1
+      - path: OOs_SM/OOs_M/OOs_OeilD/OOs_PupilleD
+        weight: 1
+      - path: OOs_SM/OOs_M/OOs_OeilG
+        weight: 1
+      - path: OOs_SM/OOs_M/OOs_OeilG/OOs_PaupiereG
+        weight: 1
+      - path: OOs_SM/OOs_M/OOs_OeilG/OOs_PaupiereG001
+        weight: 1
+      - path: OOs_SM/OOs_M/OOs_OeilG/OOs_PupilleG
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
