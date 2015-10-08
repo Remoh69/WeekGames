@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Controle_Player : MonoBehaviour {
 
-	public float m_rVitesse_Dep = 3;
+	public float m_rVitesse_Dep = 8;
 	public float m_rVitesse_Rot = 250;
 	public float m_rAngle;
 
