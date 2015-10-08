@@ -132,6 +132,7 @@ ModelImporter:
     7400002: Walk
     7400004: Push
     7400006: Dance
+    7400008: Shoot
     9500000: //RootNode
     11100000: //RootNode
     13700000: Chibis
@@ -378,8 +379,8 @@ ModelImporter:
     - serializedVersion: 16
       name: Walk
       takeName: Take 001
-      firstFrame: 65
-      lastFrame: 96
+      firstFrame: 70
+      lastFrame: 95
       wrapMode: 2
       orientationOffsetY: 0
       level: 0
@@ -1035,6 +1036,226 @@ ModelImporter:
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Shoot
+      takeName: Take 001
+      firstFrame: 185
+      lastFrame: 218
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Chibis
+        weight: 1
+      - path: Chibis_Master
+        weight: 1
+      - path: Chibis_Master/Chibis_Position
+        weight: 1
+      - path: Chibis_Master/Chibis_Position/Chibis 1
+        weight: 1
+      - path: Chibis_Master/Chibis_Position/Chibis 1/Chibis Pelvis
+        weight: 1
+      - path: Chibis_Master/Chibis_Position/Chibis 1/Chibis Pelvis/Chibis Spine
+        weight: 1
+      - path: Chibis_Master/Chibis_Position/Chibis 1/Chibis Pelvis/Chibis Spine/Chibis
+          L Thigh
+        weight: 1
+      - path: Chibis_Master/Chibis_Position/Chibis 1/Chibis Pelvis/Chibis Spine/Chibis
+          L Thigh/Chibis L Calf
+        weight: 1
+      - path: Chibis_Master/Chibis_Position/Chibis 1/Chibis Pelvis/Chibis Spine/Chibis
+          L Thigh/Chibis L Calf/Chibis L Foot
+        weight: 1
+      - path: Chibis_Master/Chibis_Position/Chibis 1/Chibis Pelvis/Chibis Spine/Chibis
+          L Thigh/Chibis L Calf/Chibis L Foot/Chibis L Toe0
+        weight: 1
+      - path: Chibis_Master/Chibis_Position/Chibis 1/Chibis Pelvis/Chibis Spine/Chibis
+          R Thigh
+        weight: 1
+      - path: Chibis_Master/Chibis_Position/Chibis 1/Chibis Pelvis/Chibis Spine/Chibis
+          R Thigh/Chibis R Calf
+        weight: 1
+      - path: Chibis_Master/Chibis_Position/Chibis 1/Chibis Pelvis/Chibis Spine/Chibis
+          R Thigh/Chibis R Calf/Chibis R Foot
+        weight: 1
+      - path: Chibis_Master/Chibis_Position/Chibis 1/Chibis Pelvis/Chibis Spine/Chibis
+          R Thigh/Chibis R Calf/Chibis R Foot/Chibis R Toe0
+        weight: 1
+      - path: Chibis_Master/Chibis_Position/Chibis 1/Chibis Pelvis/Chibis Spine/Chibis
+          Spine1
+        weight: 1
+      - path: Chibis_Master/Chibis_Position/Chibis 1/Chibis Pelvis/Chibis Spine/Chibis
+          Spine1/Chibis Neck
+        weight: 1
+      - path: Chibis_Master/Chibis_Position/Chibis 1/Chibis Pelvis/Chibis Spine/Chibis
+          Spine1/Chibis Neck/Chibis Head
+        weight: 1
+      - path: Chibis_Master/Chibis_Position/Chibis 1/Chibis Pelvis/Chibis Spine/Chibis
+          Spine1/Chibis Neck/Chibis Head/Chibis_Bouche
+        weight: 1
+      - path: Chibis_Master/Chibis_Position/Chibis 1/Chibis Pelvis/Chibis Spine/Chibis
+          Spine1/Chibis Neck/Chibis Head/Chibis_Chapeau
+        weight: 1
+      - path: Chibis_Master/Chibis_Position/Chibis 1/Chibis Pelvis/Chibis Spine/Chibis
+          Spine1/Chibis Neck/Chibis Head/Chibis_Oeil_D
+        weight: 1
+      - path: Chibis_Master/Chibis_Position/Chibis 1/Chibis Pelvis/Chibis Spine/Chibis
+          Spine1/Chibis Neck/Chibis Head/Chibis_Oeil_G
+        weight: 1
+      - path: Chibis_Master/Chibis_Position/Chibis 1/Chibis Pelvis/Chibis Spine/Chibis
+          Spine1/Chibis Neck/Chibis Head/Chibis_PaupiereB_D
+        weight: 1
+      - path: Chibis_Master/Chibis_Position/Chibis 1/Chibis Pelvis/Chibis Spine/Chibis
+          Spine1/Chibis Neck/Chibis Head/Chibis_PaupiereB_G
+        weight: 1
+      - path: Chibis_Master/Chibis_Position/Chibis 1/Chibis Pelvis/Chibis Spine/Chibis
+          Spine1/Chibis Neck/Chibis Head/Chibis_PaupiereH_D
+        weight: 1
+      - path: Chibis_Master/Chibis_Position/Chibis 1/Chibis Pelvis/Chibis Spine/Chibis
+          Spine1/Chibis Neck/Chibis Head/Chibis_PaupiereH_G
+        weight: 1
+      - path: Chibis_Master/Chibis_Position/Chibis 1/Chibis Pelvis/Chibis Spine/Chibis
+          Spine1/Chibis Neck/Chibis L Clavicle
+        weight: 1
+      - path: Chibis_Master/Chibis_Position/Chibis 1/Chibis Pelvis/Chibis Spine/Chibis
+          Spine1/Chibis Neck/Chibis L Clavicle/Chibis L UpperArm
+        weight: 1
+      - path: Chibis_Master/Chibis_Position/Chibis 1/Chibis Pelvis/Chibis Spine/Chibis
+          Spine1/Chibis Neck/Chibis L Clavicle/Chibis L UpperArm/Chibis L Forearm
+        weight: 1
+      - path: Chibis_Master/Chibis_Position/Chibis 1/Chibis Pelvis/Chibis Spine/Chibis
+          Spine1/Chibis Neck/Chibis L Clavicle/Chibis L UpperArm/Chibis L Forearm/Chibis
+          L Hand
+        weight: 1
+      - path: Chibis_Master/Chibis_Position/Chibis 1/Chibis Pelvis/Chibis Spine/Chibis
+          Spine1/Chibis Neck/Chibis L Clavicle/Chibis L UpperArm/Chibis L Forearm/Chibis
+          L Hand/Chibis L Finger0
+        weight: 1
+      - path: Chibis_Master/Chibis_Position/Chibis 1/Chibis Pelvis/Chibis Spine/Chibis
+          Spine1/Chibis Neck/Chibis L Clavicle/Chibis L UpperArm/Chibis L Forearm/Chibis
+          L Hand/Chibis L Finger0/Chibis L Finger01
+        weight: 1
+      - path: Chibis_Master/Chibis_Position/Chibis 1/Chibis Pelvis/Chibis Spine/Chibis
+          Spine1/Chibis Neck/Chibis L Clavicle/Chibis L UpperArm/Chibis L Forearm/Chibis
+          L Hand/Chibis L Finger1
+        weight: 1
+      - path: Chibis_Master/Chibis_Position/Chibis 1/Chibis Pelvis/Chibis Spine/Chibis
+          Spine1/Chibis Neck/Chibis L Clavicle/Chibis L UpperArm/Chibis L Forearm/Chibis
+          L Hand/Chibis L Finger1/Chibis L Finger11
+        weight: 1
+      - path: Chibis_Master/Chibis_Position/Chibis 1/Chibis Pelvis/Chibis Spine/Chibis
+          Spine1/Chibis Neck/Chibis L Clavicle/Chibis L UpperArm/Chibis L Forearm/Chibis
+          L Hand/Chibis L Finger2
+        weight: 1
+      - path: Chibis_Master/Chibis_Position/Chibis 1/Chibis Pelvis/Chibis Spine/Chibis
+          Spine1/Chibis Neck/Chibis L Clavicle/Chibis L UpperArm/Chibis L Forearm/Chibis
+          L Hand/Chibis L Finger2/Chibis L Finger21
+        weight: 1
+      - path: Chibis_Master/Chibis_Position/Chibis 1/Chibis Pelvis/Chibis Spine/Chibis
+          Spine1/Chibis Neck/Chibis L Clavicle/Chibis L UpperArm/Chibis L Forearm/Chibis
+          L Hand/Chibis L Finger3
+        weight: 1
+      - path: Chibis_Master/Chibis_Position/Chibis 1/Chibis Pelvis/Chibis Spine/Chibis
+          Spine1/Chibis Neck/Chibis L Clavicle/Chibis L UpperArm/Chibis L Forearm/Chibis
+          L Hand/Chibis L Finger3/Chibis L Finger31
+        weight: 1
+      - path: Chibis_Master/Chibis_Position/Chibis 1/Chibis Pelvis/Chibis Spine/Chibis
+          Spine1/Chibis Neck/Chibis L Clavicle/Chibis_Sangle0_G
+        weight: 1
+      - path: Chibis_Master/Chibis_Position/Chibis 1/Chibis Pelvis/Chibis Spine/Chibis
+          Spine1/Chibis Neck/Chibis L Clavicle/Chibis_Sangle1_G
+        weight: 1
+      - path: Chibis_Master/Chibis_Position/Chibis 1/Chibis Pelvis/Chibis Spine/Chibis
+          Spine1/Chibis Neck/Chibis L Clavicle/Chibis_Sangle2_G
+        weight: 1
+      - path: Chibis_Master/Chibis_Position/Chibis 1/Chibis Pelvis/Chibis Spine/Chibis
+          Spine1/Chibis Neck/Chibis R Clavicle
+        weight: 1
+      - path: Chibis_Master/Chibis_Position/Chibis 1/Chibis Pelvis/Chibis Spine/Chibis
+          Spine1/Chibis Neck/Chibis R Clavicle/Chibis R UpperArm
+        weight: 1
+      - path: Chibis_Master/Chibis_Position/Chibis 1/Chibis Pelvis/Chibis Spine/Chibis
+          Spine1/Chibis Neck/Chibis R Clavicle/Chibis R UpperArm/Chibis R Forearm
+        weight: 1
+      - path: Chibis_Master/Chibis_Position/Chibis 1/Chibis Pelvis/Chibis Spine/Chibis
+          Spine1/Chibis Neck/Chibis R Clavicle/Chibis R UpperArm/Chibis R Forearm/Chibis
+          R Hand
+        weight: 1
+      - path: Chibis_Master/Chibis_Position/Chibis 1/Chibis Pelvis/Chibis Spine/Chibis
+          Spine1/Chibis Neck/Chibis R Clavicle/Chibis R UpperArm/Chibis R Forearm/Chibis
+          R Hand/Chibis R Finger0
+        weight: 1
+      - path: Chibis_Master/Chibis_Position/Chibis 1/Chibis Pelvis/Chibis Spine/Chibis
+          Spine1/Chibis Neck/Chibis R Clavicle/Chibis R UpperArm/Chibis R Forearm/Chibis
+          R Hand/Chibis R Finger0/Chibis R Finger01
+        weight: 1
+      - path: Chibis_Master/Chibis_Position/Chibis 1/Chibis Pelvis/Chibis Spine/Chibis
+          Spine1/Chibis Neck/Chibis R Clavicle/Chibis R UpperArm/Chibis R Forearm/Chibis
+          R Hand/Chibis R Finger1
+        weight: 1
+      - path: Chibis_Master/Chibis_Position/Chibis 1/Chibis Pelvis/Chibis Spine/Chibis
+          Spine1/Chibis Neck/Chibis R Clavicle/Chibis R UpperArm/Chibis R Forearm/Chibis
+          R Hand/Chibis R Finger1/Chibis R Finger11
+        weight: 1
+      - path: Chibis_Master/Chibis_Position/Chibis 1/Chibis Pelvis/Chibis Spine/Chibis
+          Spine1/Chibis Neck/Chibis R Clavicle/Chibis R UpperArm/Chibis R Forearm/Chibis
+          R Hand/Chibis R Finger2
+        weight: 1
+      - path: Chibis_Master/Chibis_Position/Chibis 1/Chibis Pelvis/Chibis Spine/Chibis
+          Spine1/Chibis Neck/Chibis R Clavicle/Chibis R UpperArm/Chibis R Forearm/Chibis
+          R Hand/Chibis R Finger2/Chibis R Finger21
+        weight: 1
+      - path: Chibis_Master/Chibis_Position/Chibis 1/Chibis Pelvis/Chibis Spine/Chibis
+          Spine1/Chibis Neck/Chibis R Clavicle/Chibis R UpperArm/Chibis R Forearm/Chibis
+          R Hand/Chibis R Finger3
+        weight: 1
+      - path: Chibis_Master/Chibis_Position/Chibis 1/Chibis Pelvis/Chibis Spine/Chibis
+          Spine1/Chibis Neck/Chibis R Clavicle/Chibis R UpperArm/Chibis R Forearm/Chibis
+          R Hand/Chibis R Finger3/Chibis R Finger31
+        weight: 1
+      - path: Chibis_Master/Chibis_Position/Chibis 1/Chibis Pelvis/Chibis Spine/Chibis
+          Spine1/Chibis Neck/Chibis R Clavicle/Chibis_Sangle0_D
+        weight: 1
+      - path: Chibis_Master/Chibis_Position/Chibis 1/Chibis Pelvis/Chibis Spine/Chibis
+          Spine1/Chibis Neck/Chibis R Clavicle/Chibis_Sangle1_D
+        weight: 1
+      - path: Chibis_Master/Chibis_Position/Chibis 1/Chibis Pelvis/Chibis Spine/Chibis
+          Spine1/Chibis Neck/Chibis R Clavicle/Chibis_Sangle2_D
+        weight: 1
+      - path: Chibis_Master/Chibis_Position/Chibis 1/Chibis Pelvis/Chibis Spine/Chibis
+          Spine1/Chibis_Sac
+        weight: 1
+      - path: Chibis_Master/Chibis_Position/Chibis 1/Chibis Pelvis/Chibis Spine/Chibis
+          Tail
+        weight: 1
+      - path: Chibis_Master/Chibis_Position/Chibis 1/Chibis Pelvis/Chibis Spine/Chibis
+          Tail/Chibis Tail1
+        weight: 1
+      - path: Chibis_Master/Chibis_Position/Chibis 1/Chibis Pelvis/Chibis Spine/Chibis
+          Tail/Chibis Tail1/Chibis Tail2
+        weight: 1
+      - path: Chibis_Master/Chibis_Position/Chibis 1/Chibis Pelvis/Chibis Spine/Chibis
+          Tail/Chibis Tail1/Chibis Tail2/Chibis Tail3
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -1071,8 +1292,10 @@ ModelImporter:
     legStretch: .0500000007
     feetSpacing: 0
     rootMotionBoneName: 
+    hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
+  humanoidOversampling: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
