@@ -55,6 +55,7 @@ public class Jeu : MonoBehaviour {
 	int[,] tabCase_Level = {{0,0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0}};
 
 	List<STCase> m_tabSTCase;
+	List<GameObject> m_tabGameObject;
 
 	WWW wwwLevelURL;
 
@@ -78,6 +79,7 @@ public class Jeu : MonoBehaviour {
 		m_goNouveau.SetActive(true);
 
 		m_tabSTCase = new List <STCase>();
+		m_tabGameObject = new List <GameObject>();
 
 	}
 	
@@ -128,10 +130,12 @@ public class Jeu : MonoBehaviour {
 		m_tabSTCase.Clear ();
 		
 		m_goCase_Player = Instantiate(Resources.Load ("Prefab/Chibis"),new Vector3(0,0,0),Quaternion.identity) as GameObject;
+		m_tabGameObject.Add (m_goCase_Player);
 
 		m_goCase_Player.SetActive (false);
 		
 		m_goCase_Player.transform.parent = m_goJeu_3D.transform;
+
 		
 		string sLigne;
 		
@@ -154,8 +158,6 @@ public class Jeu : MonoBehaviour {
 
 				sLigne = m_tabsSQLLevel[i];
 
-				Debug.Log (sLigne);
-
 				j = 0;
 				
 				foreach (char cCase in sLigne) {
@@ -165,7 +167,8 @@ public class Jeu : MonoBehaviour {
 					//if(cCase != '0'){
 					
 						m_goCase_Sol = Instantiate(Resources.Load (tabLoad[int.Parse (cCase + "")]),new Vector3(j * 2,0,(9 - i) * 2),Quaternion.identity) as GameObject;
-						
+						m_tabGameObject.Add (m_goCase_Sol);
+
 						m_goCase_Sol.transform.parent = m_goJeu_3D.transform;
 						
 						if(cCase == '5'){
@@ -183,20 +186,23 @@ public class Jeu : MonoBehaviour {
 							scpTouche_Caisse.Set_Case(j, i);
 							
 							m_goCase_Sol = Instantiate(Resources.Load (tabLoad[1]),new Vector3(j * 2,0,(9 - i) * 2),Quaternion.identity) as GameObject;
-							
+							m_tabGameObject.Add (m_goCase_Sol);
+
 							m_goCase_Sol.transform.parent = m_goJeu_3D.transform;
 
-							m_goCase_Sol = Instantiate(Resources.Load (tabLoad[1]),new Vector3(j * 2,0.02f,(9 - i) * 2),Quaternion.identity) as GameObject;
+							/*m_goCase_Sol = Instantiate(Resources.Load (tabLoad[1]),new Vector3(j * 2,0.02f,(9 - i) * 2),Quaternion.identity) as GameObject;
+							m_tabGameObject.Add (m_goCase_Sol);
 
 							rndSol = m_goCase_Sol.GetComponent<Renderer> ();
 
 							rndSol.material = m_matCaisse;
 
-							m_goCase_Sol.transform.parent = m_goJeu_3D.transform;
+							m_goCase_Sol.transform.parent = m_goJeu_3D.transform;*/
 							
 						}else if(cCase == '3'){
 							
 							m_goCase_Sol = Instantiate(Resources.Load (tabLoad[1]),new Vector3(j * 2,0.02f,(9 - i) * 2),Quaternion.identity) as GameObject;
+							m_tabGameObject.Add (m_goCase_Sol);
 
 							rndSol = m_goCase_Sol.GetComponent<Renderer> ();
 
@@ -341,6 +347,7 @@ public class Jeu : MonoBehaviour {
 			m_bLance_Editeur = true;
 			m_bAffiche_Menu = false;
 			m_cnMenu.enabled = false;
+			m_cnMenu_Princ.SetActive (false);
 			m_cnEditor.enabled = true;
 			
 		} else if (nMenu == 3) {
@@ -414,6 +421,19 @@ public class Jeu : MonoBehaviour {
 
 		if (bOuvre_Porte != bSave_EtatPorte) {
 
+			if(bOuvre_Porte){
+				Collider colPorte;
+				colPorte = m_goPorte.GetComponent<Collider>();
+				colPorte.enabled = false;
+
+			} else {
+
+				Collider colPorte;
+				colPorte = m_goPorte.GetComponent<Collider>();
+				colPorte.enabled = true;
+			}
+
+
 			Animator anPorte;
 
 			anPorte = m_goPorte.GetComponent<Animator>();
@@ -421,8 +441,27 @@ public class Jeu : MonoBehaviour {
 			anPorte.SetBool("bOuvre",bOuvre_Porte);
 
 			bSave_EtatPorte = bOuvre_Porte;
+
 		}
 
+
+	}
+
+	public IEnumerator Level_Up(){
+
+		m_nLevel++;
+
+		yield return new WaitForSeconds(3);
+
+		foreach(GameObject goObj in m_tabGameObject){
+			
+			Destroy(goObj);
+			
+		}
+
+		m_tabGameObject.Clear ();
+
+		Charge_Level ();
 
 	}
 

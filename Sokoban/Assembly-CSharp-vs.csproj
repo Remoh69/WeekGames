@@ -51,6 +51,7 @@
      <Compile Include="Assets\Resources\Scripts\Jeu.cs" />
      <Compile Include="Assets\Resources\Scripts\Touche_Caisse.cs" />
      <Compile Include="Assets\Resources\Scripts\Touche_Mur.cs" />
+     <None Include="Assets\Resources\Textures\Exemple Interfaces\Elements decoupes\Code couleur.txt" />
      <None Include="Assets\Resources\Textures\Ihm\Code couleur.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>E:/Logiciels/Unity 3D/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

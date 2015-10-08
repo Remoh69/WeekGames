@@ -9,7 +9,10 @@ public class Controle_Player : MonoBehaviour {
 
 	public int m_nDirection;
 
+	bool bGagne;
+
 	Animator anPlayer;
+	Jeu m_scpJeu;
 
 	int [] m_tabTouche = {0,0,0,0};
 
@@ -17,8 +20,10 @@ public class Controle_Player : MonoBehaviour {
 	void Start () {
 		m_rAngle = 0;
 		m_nDirection = 2;
+		bGagne = false;
 
 		anPlayer = GetComponent<Animator>();
+		m_scpJeu = Camera.main.GetComponent<Jeu> ();
 	}
 	
 	// Update is called once per frame
@@ -156,6 +161,40 @@ public class Controle_Player : MonoBehaviour {
 	public void Fin_Pousse(){
 
 		anPlayer.SetBool("bPousse",false);
+		
+	}
+
+	void Gagne(bool bOnOff){
+		
+		anPlayer.SetBool("bGagne",bOnOff);
+		
+	}
+
+
+	void OnTriggerEnter(Collider col){
+		
+		if (col.gameObject.tag == "Door") {
+			
+			Gagne(true);
+
+			if(!bGagne){
+
+				bGagne = true;
+				StartCoroutine(m_scpJeu.Level_Up());
+
+			}
+			
+		}
+		
+	}
+
+	void OnTriggerExit(Collider col){
+		
+		if (col.gameObject.tag == "Door") {
+			
+			Gagne(false);
+			
+		}
 		
 	}
 }
