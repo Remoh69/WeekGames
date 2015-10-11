@@ -9,16 +9,20 @@ ModelImporter:
     100002: Piece
     100004: Piece_Body
     100006: Piece_Master
+    100008: Piece_Etoile
     400000: //RootNode
     400002: Piece
     400004: Piece_Body
     400006: Piece_Master
+    400008: Piece_Etoile
     4300000: Piece
+    4300002: Piece_Etoile
     7400000: Idle
     7400002: Taken
     9500000: //RootNode
     11100000: //RootNode
     13700000: Piece
+    13700002: Piece_Etoile
   materials:
     importMaterials: 1
     materialName: 0
@@ -143,8 +147,10 @@ ModelImporter:
     legStretch: .0500000007
     feetSpacing: 0
     rootMotionBoneName: 
+    hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 1
+  humanoidOversampling: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
