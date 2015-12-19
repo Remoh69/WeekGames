@@ -7,6 +7,7 @@ using System.Collections.Generic;
 struct STCase{
 	public int x;
 	public int y;
+	public int nCode;
 }
 
 public class Jeu : MonoBehaviour {
@@ -50,7 +51,7 @@ public class Jeu : MonoBehaviour {
 	GameObject m_goPorte;
 
 
-	string [] tabLoad = {"Prefab/Mur","Prefab/Sol","Prefab/Caisse","Prefab/Sol","Prefab/Mur_Porte","Prefab/Sol"};
+	string [] tabLoad = {"Prefab/Mur","Prefab/Sol","Prefab/Caisse","Prefab/Sol","Prefab/Mur_Porte","Prefab/Sol","","","","","","","Prefab/Caisse","Prefab/EmplacementCaisse","Prefab/Caisse_Bleue","Prefab/EmplacementCaisse_Bleue","Prefab/Caisse_Verte","Prefab/EmplacementCaisse_Verte","Prefab/Caisse_Rouge","Prefab/EmplacementCaisse_Rouge","Prefab/Caisse_Jaune","Prefab/EmplacementCaisse_Jaune"};
 
 	int[,] tabCase_Level = {{0,0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0}};
 
@@ -61,6 +62,7 @@ public class Jeu : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
 		m_bAffiche_Menu = false;
 		m_cnEditor.enabled = false;
 
@@ -91,16 +93,23 @@ public class Jeu : MonoBehaviour {
 			m_bAffiche_Menu = !m_bAffiche_Menu;
 
 			if(!m_bAffiche_Menu && m_bLance_Editeur)
+
 				m_cnEditor.enabled = true;
+
 			else
+
 				m_cnEditor.enabled = false;
 
 			if(!m_bAffiche_Menu && m_bLance_Partie)
+
 				m_goJeu_3D.SetActive(true);
+
 			else if(m_bAffiche_Menu && m_bLance_Partie){
+
 				m_goRetour.SetActive(true);
 				m_goNouveau.SetActive(false);
 				m_goJeu_3D.SetActive(false);
+
 			}else{
 
 				m_goJeu_3D.SetActive(false);
@@ -115,15 +124,80 @@ public class Jeu : MonoBehaviour {
 
 	void Charge_Level(){
 
-		Debug.Log ("Level: " + m_nLevel);
-
 		StartCoroutine (Charge_LevelSQL());
 
+	}
+
+	int CharToInt (char TxtCh) {
+		string sHex = "" + TxtCh;
+
+		switch (sHex) {
+
+			case "0": return 0;
+			case "1": return 1;
+			case "2": return 2;
+			case "3": return 3;
+			case "4": return 4;
+			case "5": return 5;
+			case "6": return 6;
+			case "7": return 7;
+			case "8": return 8;
+			case "9": return 9;
+			case "A": return 12;
+			case "B": return 13;
+			case "C": return 14;
+			case "D": return 15;
+			case "E": return 16;
+			case "F": return 17;
+			case "G": return 18;
+			case "H": return 19;
+			case "I": return 20;
+			case "J": return 21;
+			case "K": return 22;
+			case "L": return 23;
+			case "M": return 24;
+			case "N": return 25;
+			case "O": return 26;
+			case "P": return 27;
+			case "Q": return 28;
+			case "R": return 29;
+			case "S": return 30;
+			case "T": return 31;
+			case "U": return 32;
+			case "V": return 33;
+			case "W": return 34;
+			case "X": return 35;
+			case "Y": return 36;
+			case "Z": return 37;
+		}
+
+		return 0;
+	}
+
+	char Verif_Arrivee(char cCase){
+		
+		if (cCase == 'B' || cCase == 'D' || cCase == 'F' || cCase == 'H')
+			return '3';
+		else
+			return '0';
+		
+		
+	}
+	
+	char Verif_Caisse(char cCase){
+		
+		if (cCase == 'A' || cCase == 'C' || cCase == 'E' || cCase == 'G')
+			return '2';
+		else
+			return '0';
+		
+		
 	}
 
 	IEnumerator Charge_LevelSQL(){
 		
 		GameObject m_goCase_Sol;
+		m_goCase_Sol = null;
 		GameObject m_goCase_Player;
 		Renderer rndSol;
 
@@ -154,29 +228,36 @@ public class Jeu : MonoBehaviour {
 			string[] m_tabsSQLLevel;
 			m_tabsSQLLevel = wwwLevelURL.text.ToString().Split("*"[0]);
 
-			while(i <= 10){
+			while(i < m_tabsSQLLevel.Length){
 
 				sLigne = m_tabsSQLLevel[i];
 
 				j = 0;
 				
 				foreach (char cCase in sLigne) {
-					
-					tabCase_Level[j,i] = int.Parse (cCase + "");
+
+					tabCase_Level[j,i] = CharToInt(cCase);
 
 					//if(cCase != '0'){
-					
-						m_goCase_Sol = Instantiate(Resources.Load (tabLoad[int.Parse (cCase + "")]),new Vector3(j * 2,0,(9 - i) * 2),Quaternion.identity) as GameObject;
-						m_tabGameObject.Add (m_goCase_Sol);
 
-						m_goCase_Sol.transform.parent = m_goJeu_3D.transform;
+						if(cCase != '9'){
+
+							m_goCase_Sol = Instantiate(Resources.Load (tabLoad[CharToInt(cCase)]),new Vector3(j * 2,0,(9 - i) * 2),Quaternion.identity) as GameObject;
+								
+							m_goCase_Sol.name = tabLoad[CharToInt(cCase)];
+
+							m_tabGameObject.Add (m_goCase_Sol);
+
+							m_goCase_Sol.transform.parent = m_goJeu_3D.transform;
+						
+						}
 						
 						if(cCase == '5'){
 							
 							m_goCase_Player.transform.Translate(new Vector3(j * 2,0,(9 - i)  * 2));
 
 							
-						}else if(cCase == '2'){
+						}else if(Verif_Caisse(cCase) == '2'){
 							
 							Touche_Caisse scpTouche_Caisse;
 							scpTouche_Caisse = m_goCase_Sol.GetComponent<Touche_Caisse> ();
@@ -186,6 +267,7 @@ public class Jeu : MonoBehaviour {
 							scpTouche_Caisse.Set_Case(j, i);
 							
 							m_goCase_Sol = Instantiate(Resources.Load (tabLoad[1]),new Vector3(j * 2,0,(9 - i) * 2),Quaternion.identity) as GameObject;
+							
 							m_tabGameObject.Add (m_goCase_Sol);
 
 							m_goCase_Sol.transform.parent = m_goJeu_3D.transform;
@@ -199,9 +281,10 @@ public class Jeu : MonoBehaviour {
 
 							m_goCase_Sol.transform.parent = m_goJeu_3D.transform;*/
 							
-						}else if(cCase == '3'){
+						}else if(Verif_Arrivee(cCase) == '3'){
 							
 							m_goCase_Sol = Instantiate(Resources.Load (tabLoad[1]),new Vector3(j * 2,0.02f,(9 - i) * 2),Quaternion.identity) as GameObject;
+
 							m_tabGameObject.Add (m_goCase_Sol);
 
 							rndSol = m_goCase_Sol.GetComponent<Renderer> ();
@@ -214,6 +297,7 @@ public class Jeu : MonoBehaviour {
 
 							stCase.x = j;
 							stCase.y = i;
+							stCase.nCode = tabCase_Level[j,i];
 
 							m_tabSTCase.Add (stCase);
 
@@ -230,7 +314,16 @@ public class Jeu : MonoBehaviour {
 						}else if(cCase == '4'){
 
 							m_goPorte = m_goCase_Sol;
-
+														
+							if(i == (m_tabsSQLLevel.Length - 2)){
+								m_goPorte.transform.Rotate(new Vector3(0,180,0));
+							}
+							else if(j == 0){
+								m_goPorte.transform.Rotate(new Vector3(0,270,0));
+							}
+							else if(i != 0)
+								m_goPorte.transform.Rotate(new Vector3(0,90,0));
+						
 						}
 					
 					//}
@@ -307,6 +400,8 @@ public class Jeu : MonoBehaviour {
 				m_sPseudo.text = m_tabsSQLLevel[1];
 				m_nLevel = int.Parse (m_tabsSQLLevel[2]);
 
+				Raz_Level();
+
 				Charge_Level ();
 				
 			} else {
@@ -339,7 +434,9 @@ public class Jeu : MonoBehaviour {
 
 			m_sPseudo.text = "New Player";
 			m_nLevel = 1;
-			
+
+			Raz_Level();
+
 			Charge_Level ();
 
 		} else if (nMenu == 2) {
@@ -387,15 +484,43 @@ public class Jeu : MonoBehaviour {
 			m_cnCreer_Compte.SetActive (false);
 			m_cnMenu_Princ.SetActive (true);
 			
+		}else if (nMenu == 10) {
+
+			m_cnEditor.enabled = false;
+			m_bLance_Editeur = false;
+			m_bAffiche_Menu = true;
+			m_cnMenu.enabled = true;
+			m_cnMenu_Princ.SetActive (true);
+			
 		}
 
 	}
 
+	int Verif_Arrivee(int nCase){
+		
+		if (nCase == 13 || nCase == 15 || nCase == 17 || nCase == 19 ||  nCase == 21)
+			return 3;
+		else
+			return -1;
+		
+		
+	}
+	
+	int Verif_Caisse(int nCase){
+		
+		if (nCase == 12 || nCase == 14 || nCase == 16 || nCase == 18 || nCase == 20)
+			return 2;
+		else
+			return -1;
+		
+		
+	}
+
 	public bool Controle_Case(int xOld,int yOld,int x, int y ){
 
-		if (tabCase_Level [x, y] == 1 || tabCase_Level [x, y] == 3 || tabCase_Level [x, y] == 5) {
+		if (tabCase_Level [x, y] == 1 || Verif_Arrivee(tabCase_Level [x, y]) == 3 || tabCase_Level [x, y] == 5) {
 
-			tabCase_Level [x, y] = 2;
+			tabCase_Level [x, y] = tabCase_Level [xOld, yOld];
 			tabCase_Level [xOld, yOld] = 1;
 
 			Controle_Gagne();
@@ -414,7 +539,7 @@ public class Jeu : MonoBehaviour {
 
 		foreach(STCase stC in m_tabSTCase){
 
-			if(tabCase_Level [stC.x, stC.y] != 2)
+			if((tabCase_Level [stC.x, stC.y] + 1) != stC.nCode)
 				bOuvre_Porte = false;
 
 		}
@@ -452,16 +577,22 @@ public class Jeu : MonoBehaviour {
 		m_nLevel++;
 
 		yield return new WaitForSeconds(3);
+		
+		Raz_Level();
+
+		Charge_Level ();
+
+	}
+
+	void Raz_Level(){
 
 		foreach(GameObject goObj in m_tabGameObject){
 			
 			Destroy(goObj);
 			
 		}
-
+		
 		m_tabGameObject.Clear ();
-
-		Charge_Level ();
 
 	}
 

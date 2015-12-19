@@ -1,0 +1,78 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+@font-face {
+	font-family: 'WWeekGameFontFat';
+	src:url(../fonts/WWeekGameFontFat.eot);
+	src: local('☺'), url('../fonts/WWeekGameFontFat.woff') format('woff'), url('../fonts/WWeekGameFontFat.ttf') format('truetype'), url('../fonts/WWeekGameFontFat.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+html {
+	height: 100%;
+	overflow: auto;
+	overflow-x:hidden;
+}
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: WWeekGameFontFat;
+	font-weight:normal;
+	background-color: #404040;
+	background-image:url(../images/fond_home.png);
+	background-repeat: repeat;
+}
+
+a { color:#FFFFFF; text-decoration:none;}
+a:hover { color:#0f72d8; text-decoration:underline; }
+
+#WPage {
+	position:absolute;
+	margin:0;
+	padding:0;
+	width:100%;
+	height:auto;
+}
+
+
+
+#WelcomeText {
+	text-align:center;
+	font-size:1.5em;
+	color:#FFFFFF;
+	text-shadow:0px 0px 10px rgba(0,0,0,0.75);
+}
+
+#Social {
+	position:relative;
+	margin:0 auto;
+	padding-bottom:20px;
+	width:220px;
+	font-size:1px;
+}
+
+#GameSelection {
+	position:relative;
+	top:25px;
+}
+
+#Footer {
+	position:relative;
+	top:50px;
+	text-align:center;
+	font-size:0.75em;
+	text-shadow:0px 0px 10px rgba(0,0,0,0.75);
+	color:#FFFFFF;
+}
+.Box { box-shadow:0px 0px 10px rgba(0,0,0,0.75); }
+
+.fb-share-button, .g-plus, .twitter-share-button { margin:0 20px; }
+
+.IconGame1, .IconGame2 { display:block; transition: transform 0.3s cubic-bezier(0.5, 2, 0.6, 0.5) 0s; cursor:pointer;}
+.IconGame1:hover { transform: rotate(5deg) scale(1.25, 1.25); }
+.IconGame2:hover { transform: rotate(-5deg) scale(1.25, 1.25); }
+
+
+.RedCommentText { font-size:1em; color:#da0303; text-shadow:0px 0px 10px rgba(0,0,0,0.75); }
+.WhiteTitleText { font-size:2.5em; color:#FFFFFF; text-shadow:0px 0px 10px rgba(0,0,0,0.75); }
